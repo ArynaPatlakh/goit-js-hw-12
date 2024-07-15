@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/gallery.css" />
   </head>
   <body>
-    <load ="partials/header.html" />
-
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
+    <section class="contenier">
+      <form class="search-form">
+        <input
+          class="text-input js-input"
+          type="text"
+          placeholder="Search images..."
+        />
+        <button class="btn search-btn" type="submit">Search</button>
+      </form>
     </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
-
+    <div class="loader hidden"></div>
+    <section class="contenier">
+      <ul class="gallery"></ul>
+      <button type="button" class="load-more-btn btn hidden">
+        <div class="pre-loader hidden"></div>
+        Load more
+      </button>
+    </section>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
