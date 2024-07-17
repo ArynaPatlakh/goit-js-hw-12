@@ -10,6 +10,7 @@
   gap: 15px;
 }
 
+/*-------------------INPUT---------------------------*/
 .text-input {
   border: 2px solid #808080;
   border-radius: 7px;
@@ -29,14 +30,24 @@
 .text-input:active {
   border: 1px solid #4e75ff;
 }
+
+/*-------------------BTN---------------------------*/
 .search-btn {
   width: 91px;
   height: 44px;
 }
 
 .load-more-btn {
-  width: 125px;
-  height: 40px;
+  width: 205px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .btn {
@@ -54,10 +65,7 @@
   background-color: #6c8cff;
 }
 
-.hidden {
-  display: none;
-}
-
+/*-------------------Card ---------------------------*/
 .image {
   border: 1px solid black;
 }
@@ -85,6 +93,7 @@ img {
   justify-content: center;
 }
 
+/*-------------------Additional---------------------------*/
 .error {
   max-width: 432px;
   height: 80px;
@@ -97,6 +106,7 @@ img {
   text-align: center;
 }
 
+/*-------------------LOADER---------------------------*/
 .loader {
   width: 60px;
   height: 60px;
@@ -140,6 +150,57 @@ img {
 
   100% {
     transform: translate(-20px, -20px);
+  }
+}
+
+/*-------------------PRE-LOADER---------------------------*/
+.pre-loader {
+  width: 30px;
+  height: 30px;
+  border: 3px dotted #fff;
+  border-style: solid solid dotted dotted;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+.pre-loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px dotted white;
+  border-style: solid solid dotted;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  animation: rotationBack 1s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
   }
 }
 
